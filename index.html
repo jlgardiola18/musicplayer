@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neon Green Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="player">
+        <div class="header">
+            <h2 id="track-title">Track Title</h2>
+            <label class="theme-switch" title="Toggle Light/Dark Mode">
+        <input type="checkbox" id="themeSwitcher" />
+        <span class="slider"></span>
+      </label>
+        </div>
+
+        <div class="disc-container">
+            <img src="assets/images/disc.png" alt="Disc" class="disc" id="disc" />
+        </div>
+
+        <audio id="audio"></audio>
+
+        <div class="controls">
+            <button id="prevBtn" class="control-btn" title="Previous">⏮️</button>
+            <button id="playBtn" class="control-btn" title="Play/Pause">▶️</button>
+            <button id="nextBtn" class="control-btn" title="Next">⏭️</button>
+            <button id="shuffleBtn" class="control-btn" title="Shuffle">🔀</button>
+            <div class="volume-control" title="Volume">
+                🔊
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress" min="0" max="100" value="0" />
+            <span id="duration">0:00</span>
+        </div>
+
+        <button id="togglePlaylistBtn" class="playlist-toggle">🎶 Show Playlist</button>
+        <ul id="playlist" class="hidden"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
